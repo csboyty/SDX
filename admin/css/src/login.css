@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'design';
+    src: url('../fonts/design.eot?rkacig');
+    src: url('../fonts/design.eot?rkacig#iefix') format('embedded-opentype'),
+    url('../fonts/design.ttf?rkacig') format('truetype'), url('../fonts/design.woff?rkacig') format('woff'),
+    url('../fonts/design.svg?rkacig#design') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon"], [class*=" icon"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'design' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0px;
+    padding:0px;
+    height: 100%;
+    position: relative;
+    font-family: "Arail","微软雅黑","Heiti";
+    background: #f2f3ea!important;
+}
+a{
+    text-decoration: none!important;
+}
+.header{
+    position: relative;
+    background: #fff;
+    height: 60px;
+}
+label.error{
+    color: red;
+    font-size: 14px;
+    display: block;
+}
+/*icon图标*/
+.icon-gui:before {
+    content: "\e915";
+}
+.icon-portrait:before{
+    content: "\e924";
+}
+.icon-lock:before{
+    content: "\e91c";
+}
+/*logo*/
+.logo{
+    margin: 0px;
+    display: inline-block;
+}
+.logo a{
+    color: #000;
+    line-height: 60px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 27px;
+    display: block;
+}
+.logo a .icon-gui{
+    color: #ff2e38;
+    font-size: 36px;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+
+.pCenter{
+    position: absolute;
+    height: 350px;
+    width: 410px;
+    background:#fff;
+    left:50%;
+    top:50%;
+    margin: -175px 0px 0px -205px;
+    box-shadow:2px 2px 6px rgba(0,0,0,0.3);
+}
+.tCenter{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    margin: 20px 0 30px;
+    font-weight: 500;
+}
+.row{
+    width: 80%;
+    margin: 10px auto 10px auto;
+}
+.ctrlLabel{
+    background-color: #443c3c;
+    padding:10px;
+    vertical-align: middle;
+    float: left;
+}
+.ctrlInput{
+    width: 286px;
+    height: 36px;
+    box-sizing: border-box;
+    border: #f2f2f2 solid 1px;
+    border-radius: 0 4px 4px 0;
+    background: #f2f2f2;
+    padding-left: 26px;
+}
+.ctrlInput:focus{
+    outline: none;
+    border-left:3px solid #ff2e38;
+}
+.ctrlRemember{
+    width: 24px;
+    height:24px;
+    vertical-align: middle;
+    margin:12px 12px 12px 0;
+}
+.ctrlBtn{
+    width:324px;
+    height: 48px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #443c3c;
+    background: #443c3c;
+}
+
+.ctrlBtn:hover{
+    background: #443c3c;
+    cursor: pointer;
+}

@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'design';
+    src: url('../fonts/design.eot?rkacig');
+    src: url('../fonts/design.eot?rkacig#iefix') format('embedded-opentype'),
+    url('../fonts/design.ttf?rkacig') format('truetype'), url('../fonts/design.woff?rkacig') format('woff'),
+    url('../fonts/design.svg?rkacig#design') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon"], [class*=" icon"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'design' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+}
+
+html{
+    height: 100%;
+    width:100%;
+}
+body{
+    margin: 0px;
+    padding:0px;
+    height: 100%;
+    position: relative;
+    font-family: "Arail","微软雅黑","Heiti";
+    background: #443c3c!important;
+}
+ul{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+}
+a{
+    text-decoration: none!important;
+}
+/*icon图标*/
+.icon-gui:before {
+    content: "\e915";
+}
+.icon-portrait:before{
+    content: "\e924";
+}
+.icon-lock:before{
+    content: "\e91c";
+}
+.icon-arrow-light-right:before{
+    content: '\e904';
+}
+/*body*/
+label.error{
+    color: red;
+}
+.hidden{
+    display: none;
+}
+.left{
+    width: 180px;
+}
+.right{
+    border-left: 1px solid #ccccc8;
+    background: #f2f2f2;
+    padding:50px 30px;
+    position: absolute;
+    left:180px;
+    top:60px;
+    bottom: 0px;
+    right: 0px;
+    overflow: auto;
+}
+.main{
+    width: 90%;
+    margin: 0px auto 0px auto;
+}
+.hasRightBorder{
+    border-right:1px solid #ccc;
+}
+.hasLeftBorder{
+    border-left:1px solid #ccc;
+}
+.header{
+    position: relative;
+    background: #fff;
+    height: 60px;
+}
+.tags{
+    margin-bottom: 10px;
+}
+.tags .tag{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding:0px 20px 0px 5px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+.tags .tag:hover{
+    color: red;
+}
+.tags .tag:before{
+    content:"x";
+    font-size: 16px;
+    display: inline-block;
+    line-height: 28px;
+    vertical-align: top;
+    width: 20px;
+}
+
+/**
+*logo
+*/
+.logo{
+    margin: 0px;
+    display: inline-block;
+}
+.logo a{
+    color: #000;
+    line-height: 60px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 27px;
+    display: block;
+}
+.logo a .icon-gui{
+    color: #ff2e38;
+    font-size: 36px;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+/**
+顶部userMenu
+*/
+.userMenu{
+    position: absolute;
+    right:80px;
+    bottom:0px;
+}
+.userMenu .item{
+    display: inline-block;
+    float: left;
+}
+.userMenu .item .link{
+    color: #000;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0px 15px;
+}
+.userMenu .item:first-child .link{
+    color: #ccccc8;
+}
+.userMenu .item:last-child .link{
+    padding-left: 0px;
+}
+.userMenu .item:last-child .link:before{
+    content: "";
+    width: 1px;
+    height: 14px;
+    background: #ccccc8;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+/**
+*menu导航
+*/
+.menu{
+    padding-top: 60px;
+}
+.menu .separate{
+    height: 10px;
+    background: #fff;
+}
+.menu .item {
+    min-height: 60px;
+    width: 100%;
+    border-top: 1px solid #edece3;
+    line-height: 40px;
+    position: relative;
+}
+.menu .item .rightIcon{
+
+}
+.menu .item .link{
+    font-size: 21px;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: text-top;
+    text-align: center;
+}
+.menu .item .link .icon-arrow-light-right{
+    display: inline-block;
+    font-weight: bold;
+    transform: rotate(90deg);
+    position: absolute;
+    top:20px;
+    right:5px;
+}
+.menu .item:hover,
+.menu .item.active{
+    background: #ff2e38;
+    border:0;
+}
+#item{
+
+}
+.menu .item1{
+    background: #fff;
+    min-height: 60px;
+    width: 100%;
+    border-top: 1px solid #edece3;
+    line-height: 40px;
+}
+.menu .item1 .link{
+    color: #000;
+    font-size: 18px;
+}
+.menu .item1:hover .link,
+.menu .item1 .link.active{
+    color: #ff2e38;
+}
+.menu .item:hover .subMenu{
+    display: block;
+}
+.subMenu{
+    background: #f9f9f2;
+    display: none;
+}
+.subMenu .sItem{
+    height: 35px;
+    position: relative;
+}
+.subMenu .sItem .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #edece3;
+    font-size: 0px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.subMenu .sItem .sLink{
+    font-size: 12px;
+    color: #727171;
+    display: inline-block;
+    position: absolute;
+    left:34px;
+    top:0px;
+    bottom: 0px;
+    right:0px;
+    height: 100%;
+    padding-left: 25px;
+}
+.subMenu .sItem:hover .circle {
+    background: #5dc05f;
+}
+.subMenu .sItem:hover .sLink{
+    color: #5dc05f;
+}
+
+/**
+*复写datatable
+*/
+.tableSearchContainer{
+    margin: 10px 0px;
+}
+table.dataTable{
+    margin-top: 20px;
+    width: 100%;
+}
+table.dataTable thead {
+    background: #f5f5f5;
+}
+table.dataTable thead th{
+    color: #00A67F;
+    border: none;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+    line-height: 30px!important;
+}
+table.dataTable tr{
+    line-height: 25px!important;
+}
+table.dataTable td {
+    padding: 5px!important;
+    text-align: center;
+}
+table.dataTable .thumb{
+    width: 100px;
+    height: auto;
+}
+.dataTables_paginate,.dataTables_info{
+    margin-top: 15px;
+}
+/********覆写bootstrap的table*************/
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+
+/**
+*loading
+*/
+.loading{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    opacity: .5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    background: #000;
+}
+.loading .text{
+    position: absolute;
+    left:50%;
+    top:50%;
+    color:#fff;
+}

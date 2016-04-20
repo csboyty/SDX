@@ -1,0 +1,21 @@
+{
+    "sEcho":1,
+    "success":true,
+    "iTotalRecords":20,
+    "iTotalDisplayRecords":20,
+    "aaData":[{
+        "id":1,
+        "userId":"11111111111",
+        "teacher":"1xxx1",
+        "create_time":"2015-04-09",
+        "course_detail_id":111,
+        "abstract":"1111"
+    },{
+        "id":2,
+        "userId":"22222",
+        "teacher":"22",
+        "create_time":"2014-08-19",
+        "course_detail_id":222,
+        "abstract":"22222"
+    }]
+}

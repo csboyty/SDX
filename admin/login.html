@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="webkit" name="renderer">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="keywords" content="YaLuoYe"/>
+    <meta name="description" content="YaLuoYe">
+    <title>后台登陆</title>
+    <link type="text/css" rel="stylesheet" href="css/src/login.css">
+</head>
+<body>
+
+<div class="header">
+    <h1 class="logo">
+        <a href="#">
+            <span class="icon-gui"></span>圣德西
+        </a>
+    </h1>
+</div>
+
+<form class="pCenter" id="myForm" method="post" action="#">
+    <h2 class="title">系统登陆</h2>
+    <div class="row">
+        <label class="ctrlLabel icon-portrait"></label>
+        <input class="ctrlInput" type="text" name="username" placeholder="请输入你的账号">
+    </div>
+    <div class="row">
+        <label  class="ctrlLabel icon-lock"></label>
+        <input class="ctrlInput" type="password" name="password" placeholder="请输入你的密码"/>
+    </div>
+    <div class="row">
+        <input type="checkbox" checked="checked" class="ctrlRemember" value="记住我">记住我
+    </div>
+    <div class="row">
+        <input type="submit" class="ctrlBtn" value="登陆">
+    </div>
+
+    <label class="error tCenter" >用户名或者密码错误</label>
+</form>
+</body>
+
+<script src="js/lib/jquery-2.0.3.min.js"></script>
+<script src="js/lib/jquery.form.js"></script>
+<script src="js/lib/jquery.validate.min.js"></script>
+<script src="js/src/config.js"></script>
+<script src="js/src/functions.js"></script>
+<script src="js/src/login.js"></script>
+</html>

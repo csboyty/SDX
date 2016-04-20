@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="webkit" name="renderer">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>xxxx后台管理</title>
+
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/lib/jquery.dataTables.css" rel="stylesheet" type="text/css">
+    <link href="css/lib/jquery.toastmessage.css" rel="stylesheet" type="text/css">
+    <link href="css/src/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<script src="header.js"></script>
+
+<nav class="left">
+
+    <script src="menu.js"></script>
+
+</nav>
+
+<section class="right">
+    <article class="main">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">客户管理</h1>
+            </div>
+            <div class="panel-body" id="opt-body">
+                <!--<div class="input-group tableSearchContainer col-md-6">
+                    <input type="text" id="searchContent" class="form-control" placeholder="内容">
+                    <span class="input-group-btn">
+                        <button id="searchBtn" class="btn btn-default" type="button">搜索</button>
+                    </span>
+                </div>-->
+                <form class="form-horizontal" action="#" method="post" id="myForm">
+                    <div class="form-group">
+                        <div class="col-md-8" >
+                            <input type="text"  class="form-control" name="userId">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <button type="submit" class="btn btn-primary">添加</button>
+                        </div>
+                    </div>
+                </form>
+                <table id="myTable" class="dataTable">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<div class="loading hidden" id="loading">
+    <span class="text">Loading...</span>
+</div>
+
+
+<script src="js/lib/jquery-2.0.3.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/jquery.dataTables.min.js"></script>
+<script src="js/lib/jquery.validate.min.js"></script>
+<script src="js/lib/jquery.form.js"></script>
+<script src="js/lib/jquery.toastmessage.js"></script>
+<script src="js/src/config.js"></script>
+<script src="js/src/functions.js"></script>
+<script src="js/src/userMgr.js"></script>
+
+</body>
+</html>
