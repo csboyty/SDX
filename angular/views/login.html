@@ -1,0 +1,10 @@
+<div class="pCenter pCenter1" ng-controller="login">
+    <h1 class="pageTitle">
+        欢迎使用会员风格意向定义系统<br>（beta v0.1）
+    </h1>
+    <form class="myForm">
+        <h3 class="label">请填写用户编号</h3>
+        <input type="text" placeholder="请输入UID" class="input" ng-keyup="showNext=true">
+        <input type="submit" value="下一步" class="btn" ng-show="showNext" ng-click="toNext()">
+    </form>
+</div>

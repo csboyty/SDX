@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="webkit" name="renderer">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>用户登陆</title>
+    <link rel="stylesheet" type="text/css" href="css/lib/toaster.css">
+    <link rel="stylesheet" type="text/css"  href="css/src/main.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-animate.min.js"></script>
+    <script src="js/lib/angular-resource.min.js"></script>
+    <script src="js/lib/angular-touch.min.js"></script>
+    <script src="js/lib/toaster.js"></script>
+    <script src="js/src/controllers.js"></script>
+    <script src="js/src/models.js"></script>
+    <script src="js/src/services.js"></script>
+    <script src="js/src/directives.js"></script>
+    <script src="js/src/app.js"></script>
+</head>
+<body ng-controller="super">
+<toaster-container toaster-options="{'position-class': 'toast-bottom-right'}"></toaster-container>
+
+<div class="wrapper" ng-include="mainVars.contentTemplate">
+
+</div>
+
+<div class="loading" ng-show="rootFlags.showLoading">
+    MOOD
+</div>
+
+</body>
+</html>

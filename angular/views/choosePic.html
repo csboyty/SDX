@@ -1,0 +1,12 @@
+<div style="height: 100%;width:100%" ng-controller="choosePic" >
+    <div class="main" control-scroll>
+        <div class="list">
+            <img ng-class="{active:i.selected}" ng-click="selectPic($index)" ng-src="{{i.url}}" ng-repeat="i in items">
+        </div>
+    </div>
+    <div class="footer">
+        <p class="tip">请在以上图片中选择符合您的风格意向<br>（可多选）</p>
+        <input type="submit" value="完成提交" class="btn" ng-show="showSubmit" ng-click="submitSelect()">
+        <input type="button" value="切换用户" class="btn" ng-click="toLogin()">
+    </div>
+</div>

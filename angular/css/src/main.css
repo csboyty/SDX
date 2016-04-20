@@ -1,0 +1,166 @@
+html,body{
+    height:100%;
+}
+body{
+    position: relative;
+    margin: 0;
+    padding:0;
+    border:0;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5{
+    margin: 0px;
+}
+.btn{
+    display: block;
+    background: #000;
+    color: #fff;
+    padding:0px 40px;
+    height: 60px;
+    border-radius: 15px;
+    outline:none;
+    font-size: 24px;
+    line-height: 60px;
+}
+.pCenter{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.abs{
+    position: absolute;
+}
+.pCenter1{
+    height: 345px;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+/*
+*pageTitle
+*/
+.pageTitle{
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    white-space: nowrap;
+}
+.main{
+    overflow:hidden;
+    left:0px;
+    top:0px;
+    bottom:80px;
+    right:0px;
+    position: absolute;
+}
+/*footer布局*/
+.footer{
+    height: 80px;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    width: 100%;
+}
+.footer .tip{
+    margin: 0;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 40px;
+    float: left;
+}
+.footer .selecter{
+    margin: 0;
+    font-size: 24pt;
+}
+.footer .btn{
+    margin-left: auto;
+    margin-top: 10px;
+    float: right;
+    margin-right: 10px;
+}
+/*
+*form
+*/
+.myForm{
+    margin-top: 80px;
+    text-align: center;
+}
+.myForm .label{
+    text-align: center;
+    display: block;
+    font-size: 38px;
+}
+.myForm .input{
+    width: 480px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    border:2px solid rgb(0,0,0);
+    font-weight: 700;
+    margin: 10px 0px;
+}
+.myForm .btn{
+    margin: auto;
+}
+/*list布局*/
+.list{
+    width: 100%;
+    height: 100%;
+}
+.list img{
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 25%;
+    height: 50%;
+}
+.list img.active{
+    border:2px solid #000;
+}
+.loading{
+    color:#f78b28;
+    position: absolute;
+    display: block;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 0px 10px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.loading.ng-hide-add-active{
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+    }
+}
+@-moz-keyframes spin{
+    0%{
+        -moz-transform:rotate(0deg);
+    }
+    100%{
+        -moz-transform:rotate(360deg);
+    }
+}
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+
