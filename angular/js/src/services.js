@@ -27,10 +27,11 @@ services.constant("Config",{
         systemError:"系统发生错误，请稍后重试！"
     },
     ajaxUrls:{
-        baseUrl:"",
-        accountIsExist:"data/json/accountIsExist.json",
-        submitSelect:"",
-        clothesLoad:"data/json/items.json"
+        baseUrl:"http://192.168.2.6:8080/sdx/",
+        //baseUrl:"",
+        submitSelect:"user/insert",
+        //clothesLoad:"data/json/items.php"
+        clothesLoad:"style/list"
     }
 });
 services.constant("App",{
@@ -151,6 +152,7 @@ services.service("CFunctions",["$rootScope",
 
 services.service("Storage",function(){
     this.lastLoadedCount=0;
+    this.userId=0;
 });
 
 services.factory('safeApply', ["$rootScope",function($rootScope) {

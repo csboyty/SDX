@@ -1,53 +1,29 @@
 {
     "resultCode":200,
     "hasNoMoreFlag":false,
-    "items":[{
+    "object":[{
         "id":1,
-        "url":"data/1.jpg"
+        "imageUrl":"data/1.jpg"
     },{
         "id":2,
-        "url":"data/2.jpg"
+        "imageUrl":"data/2.jpg"
     },{
         "id":3,
-        "url":"data/3.jpg"
+        "imageUrl":"data/3.jpg"
     },{
         "id":4,
-        "url":"data/4.jpg"
+        "imageUrl":"data/4.jpg"
     },{
         "id":5,
-        "url":"data/5.jpg"
+        "imageUrl":"data/5.jpg"
     },{
         "id":6,
-        "url":"data/1.jpg"
+        "imageUrl":"data/1.jpg"
     },{
         "id":7,
-        "url":"data/7.jpg"
+        "imageUrl":"data/7.jpg"
     },{
         "id":8,
-        "url":"data/8.jpg"
-    },{
-        "id":9,
-        "url":"data/8.jpg"
-    },{
-        "id":10,
-        "url":"data/7.jpg"
-    },{
-        "id":11,
-        "url":"data/6.jpg"
-    },{
-        "id":12,
-        "url":"data/5.jpg"
-    },{
-        "id":13,
-        "url":"data/4.jpg"
-    },{
-        "id":14,
-        "url":"data/3.jpg"
-    },{
-        "id":15,
-        "url":"data/2.jpg"
-    },{
-        "id":16,
-        "url":"data/1.jpg"
+        "imageUrl":"data/8.jpg"
     }]
 }

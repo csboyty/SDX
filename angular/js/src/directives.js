@@ -32,9 +32,9 @@ directives.directive("controlScroll", ["$timeout","$window","$document","Clothes
                             elem.scrollTop=oldScrollTop+(clientH%2==0?clientH:clientH-1);
                             oldScrollTop=elem.scrollTop;
                             if(Storage.lastLoadedCount!=Config.hasNoMoreFlag){
-                                Clothes.query(function(data){
-                                    scope.items=scope.items.concat(data.items);
-                                    if(data.hasNoMore){
+                                Clothes.query({userId:Storage.userId},function(data){
+                                    scope.items=scope.items.concat(data.object);
+                                    if(data.object.length<Config.perLoadCount.list){
                                         Storage.lastLoadedCount=Config.hasNoMoreFlag;
                                     }
                                 });

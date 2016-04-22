@@ -1,7 +1,10 @@
 <div style="height: 100%;width:100%" ng-controller="choosePic" >
-    <div class="main" control-scroll>
-        <div class="list">
-            <img ng-class="{active:i.selected}" ng-click="selectPic($index)" ng-src="{{i.url}}" ng-repeat="i in items">
+    <div class="main" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
+        <div class="list" ng-click="selectPic($event)">
+            <div class="item" style="left:{{scroll.itemsLeft[$index]}};" ng-repeat="i in items">
+                <img class="image" ng-class="{active:ic.selected}" data-index="{{$parent.$index}},{{$index}}"
+                     ng-src="{{ic.imageUrl}}" ng-repeat="ic in i">
+            </div>
         </div>
     </div>
     <div class="footer">

@@ -80,8 +80,7 @@ app.controller("super",["$scope","Config","CFunctions","Storage",
 
         //使用对象，子scope可以直接覆盖（对象地址）
         $scope.mainVars={
-            contentTemplate:Config.viewUrls.login,
-            uid:0
+            contentTemplate:Config.viewUrls.login
         };
 
         $scope.toPage=function(pageName){
