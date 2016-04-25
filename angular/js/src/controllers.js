@@ -55,10 +55,11 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
                 $scope.items[pIndex][index].selected=!$scope.items[pIndex][index].selected;
 
                 for(var i= 0,len=$scope.items.length;i<len;i++){
-                    for(var j= 0,length=$scope.items[i].length;j<length;j++)
-                    if($scope.items[i][j].selected){
-                        hasSelected=true;
-                        break;
+                    for(var j= 0,length=$scope.items[i].length;j<length;j++){
+                        if($scope.items[i][j].selected){
+                            hasSelected=true;
+                            break;
+                        }
                     }
                 }
 
@@ -100,9 +101,12 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
         $scope.submitSelect=function(){
             var selects=[];
             for(var i= 0,len=$scope.items.length;i<len;i++){
-                if($scope.items[i].selected){
-                    selects.push($scope.items[i].id)
+                for(var j= 0,length=$scope.items[i].length;j<length;j++){
+                    if($scope.items[i][j].selected){
+                        selects.push($scope.items[i][j].id);
+                    }
                 }
+
             }
             $http({
                 url:Config.ajaxUrls.baseUrl+Config.ajaxUrls.submitSelect,
