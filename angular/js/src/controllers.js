@@ -22,19 +22,19 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
 
         $scope.items=[];
         $scope.scroll={
-            itemsLeft:[],
+            itemsStyle:[],
             currentScrollNum:0
         };
 
         Clothes.query({userId:Storage.userId},function(data){
             $scope.items.push(data.object);
-            $scope.scroll.itemsLeft.push(0);
+            $scope.scroll.itemsStyle.push("visible");
             if(data.object.length<Config.perLoadCount.list){
                 Storage.lastLoadedCount=Config.hasNoMoreFlag;
             }else{
                 Clothes.query({userId:Storage.userId},function(data){
                     $scope.items.push(data.object);
-                    $scope.scroll.itemsLeft.push("100%");
+                    $scope.scroll.itemsStyle.push("hidden");
                     if(data.object.length<Config.perLoadCount.list){
                         Storage.lastLoadedCount=Config.hasNoMoreFlag;
                     }
@@ -46,9 +46,13 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
         $scope.selectPic=function(event){
             var hasSelected=false,
                 targetEl=event.target,
+                targetClassName=targetEl.className,
                 pIndex= 0,index = 0,indexArray;
 
-            if(targetEl.className.indexOf("image")!=-1){
+            if(targetClassName.indexOf("imageContainer")!=-1||targetClassName.indexOf("image")!=-1){
+                if(!targetEl.dataset.index){
+                    targetEl=targetEl.parentElement;
+                }
                 indexArray=targetEl.dataset.index.split(",");
                 pIndex=indexArray[0];
                 index=indexArray[1];
@@ -75,16 +79,16 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
             $scope.mainVars.contentTemplate=Config.viewUrls.login;
         };
         $scope.swipeLeft=function(){
-            if($scope.scroll.currentScrollNum<$scope.scroll.itemsLeft.length-1){
-                $scope.scroll.itemsLeft[$scope.scroll.currentScrollNum]="-100%";
+            if($scope.scroll.currentScrollNum<$scope.scroll.itemsStyle.length-1){
+                $scope.scroll.itemsStyle[$scope.scroll.currentScrollNum]="hidden";
                 $scope.scroll.currentScrollNum++;
-                $scope.scroll.itemsLeft[$scope.scroll.currentScrollNum]="0";
+                $scope.scroll.itemsStyle[$scope.scroll.currentScrollNum]="visible";
             }
 
             if(Storage.lastLoadedCount!=Config.hasNoMoreFlag){
                 Clothes.query({userId:Storage.userId},function(data){
                     $scope.items.push(data.object);
-                    $scope.scroll.itemsLeft.push("100%");
+                    $scope.scroll.itemsStyle.push("none");
                     if(data.object.length<Config.perLoadCount.list){
                         Storage.lastLoadedCount=Config.hasNoMoreFlag;
                     }
@@ -93,9 +97,9 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
         };
         $scope.swipeRight=function(){
             if($scope.scroll.currentScrollNum-1>=0){
-                $scope.scroll.itemsLeft[$scope.scroll.currentScrollNum]="100%";
+                $scope.scroll.itemsStyle[$scope.scroll.currentScrollNum]="hidden";
                 $scope.scroll.currentScrollNum--;
-                $scope.scroll.itemsLeft[$scope.scroll.currentScrollNum]="0";
+                $scope.scroll.itemsStyle[$scope.scroll.currentScrollNum]="visible";
             }
         };
         $scope.submitSelect=function(){
