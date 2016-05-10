@@ -3,8 +3,7 @@
         欢迎使用会员风格意向定义系统<br>（beta v0.1）
     </h1>
     <form class="myForm">
-        <h3 class="label">请填写用户编号</h3>
-        <input type="text" placeholder="请输入UID" class="input" ng-keyup="showNext=true" ng-model="userId">
+        <input type="text" placeholder="请填写用户编号" class="input" ng-keyup="showNext=true" ng-model="userId">
         <input type="submit" value="下一步" class="btn" ng-show="showNext" ng-click="toNext()">
     </form>
 </div>
