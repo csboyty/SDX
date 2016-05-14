@@ -6,6 +6,7 @@ body{
     margin: 0;
     padding:0;
     border:0;
+    font-family: Arail,"黑体";
 }
 a{
     text-decoration: none;
@@ -15,11 +16,12 @@ h1,h2,h3,h4,h5{
 }
 .btn{
     display: block;
-    background: #000;
+    background: #59453b;
     color: #fff;
     padding:0px 40px;
     height: 60px;
     border-radius: 15px;
+    border: none;
     outline:none;
     font-size: 24px;
     line-height: 60px;
@@ -39,6 +41,35 @@ h1,h2,h3,h4,h5{
 .wrapper{
     width: 100%;
     height: 100%;
+    background:url(../../images/app/bg.png);
+    background-size:cover;
+}
+/*header布局*/
+.header{
+    height: 80px;
+    width: 100%;
+}
+.header .tip{
+    margin: 0 0 0 -60px;
+    color:#fff;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 80px;
+    display: inline-block;
+    vertical-align: top;
+}
+.header .back{
+    background: url(../../images/app/back.png) no-repeat center center;
+    width: 138px;
+    height:80px;
+    display: inline-block;
+    vertical-align: top;
+}
+.header .btn{
+    margin-left: auto;
+    margin-top: 10px;
+    float: right;
+    margin-right: 10px;
 }
 /*
 *pageTitle
@@ -46,41 +77,16 @@ h1,h2,h3,h4,h5{
 .pageTitle{
     font-size: 40px;
     text-align: center;
-    color: black;
+    color: #fff;
     white-space: nowrap;
 }
 .main{
     overflow:hidden;
     left:0px;
-    top:0px;
-    bottom:80px;
-    right:0px;
-    position: absolute;
-}
-/*footer布局*/
-.footer{
-    height: 80px;
-    position: absolute;
+    top:80px;
     bottom:0px;
     right:0px;
-    width: 100%;
-}
-.footer .tip{
-    margin: 0;
-    padding-left: 10px;
-    font-size: 24px;
-    line-height: 40px;
-    float: left;
-}
-.footer .selecter{
-    margin: 0;
-    font-size: 24pt;
-}
-.footer .btn{
-    margin-left: auto;
-    margin-top: 10px;
-    float: right;
-    margin-right: 10px;
+    position: absolute;
 }
 /*
 *form
@@ -93,6 +99,7 @@ h1,h2,h3,h4,h5{
     text-align: center;
     display: block;
     font-size: 38px;
+    color: #fff;
 }
 .myForm .input{
     width: 480px;
@@ -100,8 +107,9 @@ h1,h2,h3,h4,h5{
     font-size: 20px;
     text-align: center;
     outline: none;
-    border:2px solid rgb(0,0,0);
-    font-weight: 700;
+    /*border:2px solid rgb(0,0,0);*/
+    border-radius:5px;
+    font-weight: bold;
     margin: 10px 0px;
 }
 .myForm .btn{
@@ -121,15 +129,27 @@ h1,h2,h3,h4,h5{
     top:0px;
     transition:all 1s linear;
 }
-.list img{
+.list .imageContainer{
     box-sizing: border-box;
-    display: block;
     float: left;
     width: 25%;
     height: 50%;
+    position: relative;
 }
-.list img.active{
-    border:2px solid #000;
+.list .imageContainer img{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.list .imageContainer.active::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background:url(../../images/app/gutter.png) center center no-repeat rgba(255,255,255,0.5);
 }
 .loading{
     color:#f78b28;

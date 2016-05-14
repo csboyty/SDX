@@ -1,15 +1,17 @@
 <div style="height: 100%;width:100%" ng-controller="choosePic" >
+    <div class="header">
+        <span class="back" ng-click="toLogin()"></span>
+        <p class="tip">请在以上图片中选择符合您的风格意向</p>
+        <input type="submit" value="完成提交" class="btn" ng-show="showSubmit" ng-click="submitSelect()">
+    </div>
     <div class="main" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
         <div class="list" ng-click="selectPic($event)">
-            <div class="item" style="left:{{scroll.itemsLeft[$index]}};" ng-repeat="i in items">
-                <img class="image" ng-class="{active:ic.selected}" data-index="{{$parent.$index}},{{$index}}"
-                     ng-src="{{ic.imageUrl}}" ng-repeat="ic in i">
+            <div class="item" style="visibility:{{scroll.itemsStyle[$index]}};" ng-repeat="i in items">
+                <div class="imageContainer" ng-class="{active:ic.selected}" data-index="{{$parent.$index}},{{$index}}"
+                     ng-repeat="ic in i">
+                    <img class="image"  ng-src="{{ic.imageUrl}}">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <p class="tip">请在以上图片中选择符合您的风格意向<br>（可多选）</p>
-        <input type="submit" value="完成提交" class="btn" ng-show="showSubmit" ng-click="submitSelect()">
-        <input type="button" value="切换用户" class="btn" ng-click="toLogin()">
     </div>
 </div>
