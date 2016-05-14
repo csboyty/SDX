@@ -27,8 +27,9 @@ services.constant("Config",{
         systemError:"系统发生错误，请稍后重试！"
     },
     ajaxUrls:{
-        baseUrl:"http://192.168.2.6:8080/sdx/",
-        //baseUrl:"",
+    	//baseUrl:"",
+        //baseUrl:"http://192.168.2.6:8080/sdx/",
+       	baseUrl:"http://42.121.145.120:7000/sdx/",
         submitSelect:"user/insert",
         //clothesLoad:"data/json/items.php"
         clothesLoad:"style/list"
