@@ -88,7 +88,7 @@ controllers.controller("choosePic",['$scope',"$http","Config","Clothes","Storage
             if(Storage.lastLoadedCount!=Config.hasNoMoreFlag){
                 Clothes.query({userId:Storage.userId},function(data){
                     $scope.items.push(data.object);
-                    $scope.scroll.itemsStyle.push("none");
+                    $scope.scroll.itemsStyle.push("hidden");
                     if(data.object.length<Config.perLoadCount.list){
                         Storage.lastLoadedCount=Config.hasNoMoreFlag;
                     }
