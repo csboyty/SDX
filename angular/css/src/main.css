@@ -127,11 +127,12 @@ h1,h2,h3,h4,h5{
     position: absolute;
     left:0px;
     top:0px;
+    font-size:0px;
     transition:all 1s linear;
 }
 .list .imageContainer{
     box-sizing: border-box;
-    float: left;
+    display: inline-block;
     width: 25%;
     height: 50%;
     position: relative;
